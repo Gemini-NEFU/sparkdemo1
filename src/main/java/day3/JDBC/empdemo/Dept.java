@@ -1,7 +1,5 @@
 package day3.JDBC.empdemo;
 
-import java.util.List;
-
 public class Dept {
     private int deptno;
     private String dname;

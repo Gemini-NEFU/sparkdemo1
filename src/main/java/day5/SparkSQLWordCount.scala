@@ -15,21 +15,21 @@ object SparkSQLWordCount {
       .getOrCreate()
 
 
-//    val lines: Dataset[String] = session.read.textFile(
-//      "data/words_day5.txt")
+    val lines: Dataset[String] = session.read.textFile(
+      "data/words_day5.txt")
 
     //读取HDFS中的单词文件
-    val lines: Dataset[String]=session.read.textFile(
-      "hdfs://hadoop101:8020/NOTICE.txt"
-    )
+//    val lines: Dataset[String]=session.read.textFile(
+//      "hdfs://hadoop101:8020/NOTICE.txt"
+//    )
     lines.show()
     // +-------------+
     // |        value |
     // +-------------+
-    // |hello hadoop|
-    // |   hello java|
-    // |  hello scala|
-    // |        java   |
+    // |hello hadoop  |
+    // |   hello java |
+    // |  hello scala |
+    // |        java  |
     // +-------------+
     //导入session对象中的隐式转换
     import session.implicits._
